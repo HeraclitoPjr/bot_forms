@@ -1,7 +1,13 @@
 <?php
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
-$arquivoValido  = false;
+
+require 'vendor/autoload.php';
+
+$arquivoValido  = true;
 $emailValido = false;
 
 #1 válido nos dois
@@ -9,11 +15,11 @@ if ($arquivoValido == true and $emailValido == true ) {
     echo " Envidado </ br > " ;
 }
 
-#2 válido somente temEmail
+#2 válido somente arquivoValido
 if ($arquivoValido == true and $emailValido != true) {
     echo " Email informado não é válido </ br > " ;
 }
-#3 válido somente emailValido
+#3 válido somente emailValido 
 if ($arquivoValido != true and $emailValido == true) {
     echo " Arquivo selecionado não é válido </ br > ";
 }
@@ -21,5 +27,8 @@ if ($arquivoValido != true and $emailValido == true) {
 if ($arquivoValido == false and $emailValido == false) {
     echo " Os dois arquivos informados estão inválidos </ br > ";
 }
-var_dump ($arquivoValido, $emailValido);
+
+// define variáveis e para valores vazios
+
+
 
