@@ -7,16 +7,17 @@
     <title>Bot_forms</title>
 </head>
 <body>
-    <form action="index.php" method="post">
-    Nome: <input type="text" name="name"><br>
-    Email: <input type="text" name="name"><br>
+    <form method="POST" action="POST">
+    Name: <input type="text" name="name"><br>
+    Email: <input type="text" name="email"><br>
+    WebSite: <input type="text" name="website">
     Selecione o tipo de arquivo: <label for="file"></label>
 
     <select name="file" id="file">
         <option value="email">E-mail</option>
         <option value="html">HTML</option>
         <option value="grafico">Gráfico</option>
-        <option value="sonoro">sonoro</option>
+        <option value="sonoro">Áudio</option>
         <option value="pdf">PDF</option>
         <option value="jpg">JPG</option>
         
